@@ -1,13 +1,8 @@
 <html>
     <head>
 
-        <script async crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-
-
-</head>
-<body>
-
-    <script>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+        <script>
         window.fbAsyncInit = function() {
           FB.init({
             appId            : '223646865959954',
@@ -16,6 +11,12 @@
             version          : 'v9.0'
           });
         };
+            </script>
+
+</head>
+<body>
+
+    <script>
     
         FB.getLoginStatus(function(response) {
         Log.info('Status Response', response);
