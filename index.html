@@ -4,7 +4,7 @@
 
 <script>
     window.fbAsyncInit = function() {
-      FB.init({
+      init({
         appId            : '223646865959954',
         autoLogAppEvents : true,
         xfbml            : true,
@@ -12,7 +12,7 @@
       });
     };
 
-    FB.getLoginStatus(function(response) {
+    getLoginStatus(function(response) {
     Log.info('Status Response', response);
     console.log(response);
     console.log(JSON.response);
