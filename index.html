@@ -11,6 +11,10 @@
         version          : 'v9.0'
       });
     };
+
+    FB.getLoginStatus(function(response) {
+    Log.info('Status Response', response);
+  });
   </script>
   <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 </head>
@@ -24,11 +28,6 @@
 
 <p>The <a href="https://developers.facebook.com/docs/reference/javascript/FB.getLoginStatus">FB.getLoginStatus()</a> function in the SDK will return the current login status of the user, and this example will show that response status in the log (look for 'Status Response' entries).</p>
 
-<script>
-  FB.getLoginStatus(function(response) {
-    Log.info('Status Response', response);
-  });
-</script>
 
 <h2>Tracking Status Changes</h2>
 
