@@ -1,27 +1,29 @@
 <html>
     <head>
 
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 
-<script>
-    window.fbAsyncInit = function() {
-      init({
-        appId            : '223646865959954',
-        autoLogAppEvents : true,
-        xfbml            : true,
-        version          : 'v9.0'
-      });
-    };
 
-    getLoginStatus(function(response) {
-    Log.info('Status Response', response);
-    console.log(response);
-    console.log(JSON.response);
-    console.log(response);
-  });
-  </script>
-  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
 </head>
 <body>
+
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId            : '223646865959954',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v9.0'
+          });
+        };
+    
+        FB.getLoginStatus(function(response) {
+        Log.info('Status Response', response);
+        console.log(response);
+        console.log(JSON.response);
+        console.log(response);
+      });
+      </script>
 
 <h1>Login Status</h1>
 
